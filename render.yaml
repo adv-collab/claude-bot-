@@ -1,0 +1,28 @@
+﻿services:
+  - type: web
+    name: gx-whatsapp-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ZAPI_INSTANCE_ID
+        sync: false
+      - key: ZAPI_TOKEN
+        sync: false
+      - key: ZAPI_CLIENT_TOKEN
+        sync: false
+      - key: ADVOGADO_WHATSAPP
+        sync: false
+      - key: VALOR_CORTE_IMPORTANTE
+        value: "1000000"
+      - key: PORT
+        value: "3000"
+      - key: GOOGLE_SHEET_ID
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_EMAIL
+        sync: false
+      - key: GOOGLE_PRIVATE_KEY
+        sync: false
+      - key: GOOGLE_SHEET_ABA
+        value: "Leads"
